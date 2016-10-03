@@ -47,6 +47,9 @@ if(UNIX OR APPLE)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall")
 endif()
 
+#fix
+set(${CMAKE_CXX_FLAGS} "-D_FORCE_INLINES ${CMAKE_CXX_FLAGS}")
+
 caffe_set_caffe_link()
 
 if(USE_libstdcpp)
